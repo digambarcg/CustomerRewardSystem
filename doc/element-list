@@ -1,0 +1,7 @@
+com.rewards.points
+com.rewards.points.controller
+com.rewards.points.exception
+com.rewards.points.model
+com.rewards.points.repository
+com.rewards.points.service
+com.rewards.points.test
