@@ -63,8 +63,9 @@ public class CustRewardSystemApplicationTests {
 		when(transactionRepository.save(any(Transaction.class))).thenReturn(transaction);
 		LocalDate localDate1 = LocalDate.parse("2026-01-01");
 		Transaction transact = new Transaction("Cust2",12231.0,localDate1);
-		String responseEntity = rewardController.addTransactions(transact);
-		assertThat(responseEntity.length()).isEqualTo(1);
+		ResponseEntity<String> responseEntity = rewardController.addTransactions(transact);
+		System.out.println("4444444444 "+responseEntity);
+		assertThat(responseEntity.getStatusCode().value()).isEqualTo(200);
 		//assertThat(responseEntity.getHeaders().getLocation().getPath()).isEqualTo("/1");
 	}
 }
